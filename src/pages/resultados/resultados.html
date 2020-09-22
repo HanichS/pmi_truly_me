@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar text-center color="primary">
+    <ion-title>Sua Análise de Estilo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="card-background-page">
+  <ion-card>
+
+    <img *ngIf='teste; else real' src="assets/img/teste.jpg"/>
+    <ng-template #real>
+        <img [src]='imagePath' >
+    </ng-template>
+    <ion-list class="card-title"> 
+        <ion-item *ngFor='let pred of predictions' style="background-color: transparent" text-right>
+          <h2 class='orange' color='secondary' text-lowercase >{{pred.tag}}</h2>
+          <p class='orange'>{{pred.probability | percent: '1.0-1' }}</p>
+        </ion-item>
+    </ion-list>
+    
+  </ion-card>
+
+  <!--
+  <ion-list> 
+      <ion-item *ngFor='let pred of predictions'>
+        <ion-icon item-start name={{getIconType(pred.tag)}}></ion-icon>
+        <h2 text-capitalize>{{pred.tag}}</h2>
+        <p>{{pred.probability | percent: '1.0-1' }}</p>
+      </ion-item>
+  </ion-list>
+-->
+  <p text-center>
+      <button ion-button color='secondary' (click)='backToHome()'>Fazer Outra Avaliação</button>
+  </p>
+ 
+
+
+</ion-content>

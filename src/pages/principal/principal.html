@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>
+      Trully Me
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding text-center>
+  <h1>Avaliação de Estilo</h1>
+  <p>
+    Tire uma foto sua na frente do espelho e diremos seu estilo
+  </p>
+  <button color='secondary' ion-button icon-right (click)='tirarFoto()'>
+      Abrir Câmera
+      <ion-icon name="aperture"></ion-icon>
+  </button>
+  <br>
+
+  <ion-footer>
+    <p>
+        Configurações de Desenvolvedor
+    </p>
+    <ion-list>
+      <ion-item>
+          <ion-label> Mock do Servidor </ion-label>
+          <ion-toggle [(ngModel)]="mock"></ion-toggle>
+      </ion-item>
+      <ion-item>
+          <ion-label>Mostrar Foto de Teste</ion-label>
+          <ion-toggle [(ngModel)]="fotoTeste"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </ion-footer>
+
+
+    
+  
+</ion-content>

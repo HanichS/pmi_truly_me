@@ -1,0 +1,39 @@
+page-resultados {
+    .orange {
+        color: orange;
+        text-shadow: 1px 1px yellow;
+    }
+
+    .card-background-page {
+        
+          ion-card {
+            color: yellow;
+            position: relative;
+            text-align: center;
+          }
+        
+          .card-title {
+            position: absolute;
+            bottom: 1%;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: bold;
+            color: #fff;
+            background-color: transparent;
+          }
+        
+          .card-subtitle {
+            font-size: 1.0em;
+            position: absolute;
+            top: 52%;
+            width: 100%;
+            color: #fff;
+          }
+    
+    }
+
+
+}
+
+
+
